@@ -1,11 +1,10 @@
 remote_theme : RedL0tus/Biu-Jekyll-Theme
-
 # Site settings
-# title: Your site
+title: Your site
 description: >
     Your description
-author: LEE SHINBI
-# email: your@e.mail
+author: Your name
+email: your@e.mail
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://16shinbi.github.io" # the base hostname & protocol for your site
 twitter_username: YourTwitter
