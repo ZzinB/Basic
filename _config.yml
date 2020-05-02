@@ -1,40 +1,21 @@
-remote_theme : sharu725/vyaasa
-#Created by webjeda - http://webjeda.com
-
+remote_theme : murraco/jekyll-theme-minimal-resume
 # Site settings
-title: "I'm SHINBI"
-title-font-size: '4em' # a provision to adjust the size of your title. If it is too long then do resize to a smaller value. By default it will be 4em.
+# title: 
+description: Jekyll Theme Minimal Resume
+# baseurl: "" # the subpath of your site, e.g. /blog
+# url: "localhost:3000" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 
-# email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Vyaasa is a minimal Jekyll theme meant for writers. Long text posts will look good with this layout. This is a free theme and can be used for all kinds of Jekyll blogs.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://16shinbi.github.io" # the base hostname & protocol for your site
+# User settings
+username: LEE SHINBI
+# user_description: I\'m a nomad Software Engineer, always searching for the next challenge; no task is too scary nor too difficult. Lately I have been immersed in the <b>crypto-world</b> working for Radix, a London based startup trying to create the next massive scalable DLT. I'm one of the two guys behind all the JS related stuff. Visit my blog here <a href="https://mauriciourraco.com" target="_blank">https://mauriciourraco.com</a>
+# user_title: Software Engineer
+# email: mauriurraco@gmail.com
+# twitter_username: 
+# github_username:  
+# gplus_username:  
 
-permalink: :title/
+# Google-analytics
+google-analytics:
+  id: ""
 
-# Build settings
-markdown: kramdown
-highlight: rouge
-paginate: 5
-paginate_path: /page:num/
-
-
-# Tracker
-analytics: UA-83979019-1
-
-# Comments
-disqus-shortname: webjeda-demo
-
-# Contact form
-# Go to https://getsimpleform.com and get a API token by signing up with your email and enter that here
-api-token:   
-
-#CSS
-sass:
-  style: compressed
-
-
-include: [_pages]
-
-gems: [jekyll-paginate, jekyll-seo-tag]
+exclude: ['package.json', 'src' , 'node_modules']
