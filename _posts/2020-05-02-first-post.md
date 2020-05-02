@@ -1,5 +1,5 @@
 ---
-title : Create New Page !
+title : Welcome to My Page !
 category : Free board
 ---
 
