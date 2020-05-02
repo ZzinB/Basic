@@ -1,21 +1,32 @@
 remote_theme : murraco/jekyll-theme-minimal-resume
 # Site settings
-# title: 
-# description: Jekyll Theme Minimal Resume
+title: Your site
+description: >
+    Your description
+author: Your name
+email: your@e.mail
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://16shinbi.github.io" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+url: "https://16shinbi.github.io" # the base hostname & protocol for your site
+twitter_username: YourTwitter
+github_username:  YourGitHub
 
-# User settings
-username: LEE SHINBI
-# user_description: I\'m a nomad Software Engineer, always searching for the next challenge; no task is too scary nor too difficult. Lately I have been immersed in the <b>crypto-world</b> working for Radix, a London based startup trying to create the next massive scalable DLT. I'm one of the two guys behind all the JS related stuff. Visit my blog here <a href="https://mauriciourraco.com" target="_blank">https://mauriciourraco.com</a>
-# user_title: Software Engineer
-# email: mauriurraco@gmail.com
-# twitter_username: 
-# github_username:  
-# gplus_username:  
+disqus_shortname: YourDisqusShortname
 
-# Google-analytics
-google-analytics:
-  id: ""
+# Build settings
+include: [_pages]
+markdown: kramdown
+permalink: /:year/:month/:title
+sass:
+    style: compressed
 
-exclude: ['package.json', 'src' , 'node_modules']
+gems:
+  - jemoji
+  - jekyll-sitemap
+# - amp-jekyll # Acceletrated Mobile Pages
+
+# AMP Settings
+# ampdir: amp/
+# enable_amp: true
+
+# Google Analytics
+# google_analytics: UA-XXXXXXXX-X
