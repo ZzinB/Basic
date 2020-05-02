@@ -1,40 +1,42 @@
-remote_theme : dyutibarma/monochrome
+remote_theme : chesterhow/tale
 # Site settings
-title: Monochrome | A minimal, responsive Jekyll blog theme
-description: "A minimal, responsive, ready to use blog template, built with Jekyll."
-url: "http://www.dyutibarma.github.io/monochrome"
+title:          Tale
+description:    "Minimal Jekyll theme for storytellers"
+baseurl:        ""
+url:            "https://16shinbi.github.io"
+
+# Google Analytics
+google_analytics: UA—XXXXXXXX-X
+
+# Author
 author:
-  name: "The Review Index"
-  email: "dyutibarma@gmail.com"
-  url: "https://thereviewindex.com"
+  name:         Chester How
+  url:          https://chester.how
+  email:        chesterhow@gmail.com
 
 # Build settings
-baseurl: /monochrome # Change this to your relative path (ex: /blog/), or leave just a /
-markdown: kramdown
-source: .
-destination: ./_site
-permalink: /:title
-paginate: 8
-paginate_path: /page:num/
+markdown:       kramdown
+include:
+  - _pages
 
-# Default values
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
+# Assets
+sass:
+  sass_dir:     _sass
+  style:        compressed
 
-# Plugins
-gems:
+# Gems
+plugins:
+  - jekyll-feed
   - jekyll-paginate
-  - jekyll-sitemap
+  - jekyll-seo-tag
+  # - jemoji #Uncomment this to allow emoji in your post
 
-# Custom variables
-version: "1.0.0"
+# Permalinks
+permalink:      /:year-:month-:day/:title
+paginate:       5
 
-# Options
-custom_header: false
-custom_nav_footer: false
-reverse: false
+# Excludes
+exclude: [ Gemfile, Gemfile.lock, tale.gemspec ]
+
+# Disqus (Set to your disqus id)
+disqus:         jekyll-tale
