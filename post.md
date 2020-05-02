@@ -1,2 +1,3 @@
-# Create New Page
-### Welcome to Shinbi's World!
+<Create New Page>
+
+Welcome to Shinbi's World!
