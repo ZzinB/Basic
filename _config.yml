@@ -10,7 +10,7 @@ url: "https://16shinbi.github.io" # the base hostname & protocol for your site
 twitter_username: YourTwitter
 github_username:  YourGitHub
 
-disqus_shortname: BI
+disqus_shortname: 
 
 # Build settings
 include: [_pages]
