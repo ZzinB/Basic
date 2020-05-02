@@ -1,6 +1,6 @@
 remote_theme : chesterhow/tale
 # Site settings
-title:          SHINBI's World
+title:          SHINBI
 description:    "Minimal Jekyll theme for storytellers"
 baseurl:        ""
 url:            "https://16shinbi.github.io"
