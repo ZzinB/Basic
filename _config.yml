@@ -1,32 +1,40 @@
-remote_theme : RedL0tus/Biu-Jekyll-Theme
+remote_theme : dyutibarma/monochrome
 # Site settings
-title: SHINBI
-description: >
-    Your description
-author: LEE SHINBI
-email: your@e.mail
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://16shinbi.github.io" # the base hostname & protocol for your site
-twitter_username: YourTwitter
-github_username:  YourGitHub
-
-disqus_shortname: 
+title: Monochrome | A minimal, responsive Jekyll blog theme
+description: "A minimal, responsive, ready to use blog template, built with Jekyll."
+url: "http://www.dyutibarma.github.io/monochrome"
+author:
+  name: "The Review Index"
+  email: "dyutibarma@gmail.com"
+  url: "https://thereviewindex.com"
 
 # Build settings
-include: [_pages]
+baseurl: /monochrome # Change this to your relative path (ex: /blog/), or leave just a /
 markdown: kramdown
-permalink: /:year/:month/:title
-sass:
-    style: compressed
+source: .
+destination: ./_site
+permalink: /:title
+paginate: 8
+paginate_path: /page:num/
 
+# Default values
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Plugins
 gems:
-  - jemoji
+  - jekyll-paginate
   - jekyll-sitemap
-# - amp-jekyll # Acceletrated Mobile Pages
 
-# AMP Settings
-# ampdir: amp/
-# enable_amp: true
+# Custom variables
+version: "1.0.0"
 
-# Google Analytics
-# google_analytics: UA-XXXXXXXX-X
+# Options
+custom_header: false
+custom_nav_footer: false
+reverse: false
