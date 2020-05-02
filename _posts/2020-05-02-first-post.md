@@ -4,4 +4,4 @@ category : Free board
 ---
 
 
-Test Post
+Hi, I'm Shinbi :)
