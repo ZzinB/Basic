@@ -33,3 +33,13 @@ int selectDataNo(Classes *c, int count){
 	getchar();
 	return no;
 }
+
+void saveData(Classes *c, int count){
+	FILE* fp;
+	fp = fopen("Classes.txt", "wt");
+	for(int i=0 ; i<count ; i++){
+			fprintf(fp, "%s %s %d %s %d\n", c[i].name, c[i].prof, c[i].class_no, c[i].day, c[i].time);
+	}
+	fclose(fp);
+	printf("저장됨\n");
+}
