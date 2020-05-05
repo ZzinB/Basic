@@ -14,7 +14,7 @@ int main(void){
 		menu=selectMenu();
 		fflush(stdin);
 		if(menu==0) break;
-		else if(menu==1) printf("add class\n");
+		else if(menu==1) printf("read class\n");
 		else if(menu==2){
 			getchar();
 			count+=addClass(&clist[curcount++]);
