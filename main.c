@@ -12,7 +12,6 @@ int main(void){
 
 	while(1){
 		menu=selectMenu();
-		scanf("%d",&menu);
 		fflush(stdin);
 		if(menu==0) break;
 		else if(menu==1) printf("add class\n");
