@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include "class.h"
+#include "manager.h"
 
 int main(void){
 	Classes clist[30]; //class list
@@ -11,7 +11,7 @@ int main(void){
 	curcount=count;
 
 	while(1){
-		printf("메뉴 선택");
+		menu=selectMenu();
 		scanf("%d",&menu);
 		fflush(stdin);
 		if(menu==0) break;
