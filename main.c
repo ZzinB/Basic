@@ -15,6 +15,10 @@ int main(void){
 		fflush(stdin);
 		if(menu==0) break;
 		else if(menu==1) printf("add class\n");
+		else if(menu==2){
+			getchar();
+			count+=addClass(&clist[curcount++]);
+		}
 		else if(menu==3) printf("update\n");
 		else if(menu==4) printf("delete\n");
 		else if(menu==5) printf("save\n");
