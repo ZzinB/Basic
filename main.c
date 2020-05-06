@@ -15,7 +15,7 @@ int main(void){
 		fflush(stdin);
 		if(menu==0) break;
 		else if(menu==1){
-			readClass(&clist[0]);
+			listSubject(clist,curcount);
 		}
 		else if(menu==2){
 			getchar();
