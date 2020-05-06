@@ -13,7 +13,7 @@ int selectMenu(){
 	return menu;
 }
 
-void listSubject(Classes *c, int count){
+listSubject(Classes *c, int count){
 //class는 교시, Day는 요일, Section은 분반
 	printf("\nNo. Subject       Professor  Class  Day  Section\n");	 
 	printf("==================================================\n");
@@ -42,4 +42,22 @@ void saveData(Classes *c, int count){
 	}
 	fclose(fp);
 	printf("저장됨\n");
+}
+
+int loadData(Classes *c){
+	int count = 0;
+	FILE* fp;
+
+	fp = fopen("Classes.txt", "rt");
+	if(fp == NULL){
+		printf("파일없음\n");
+		return 0;
+	}
+	for(;;count++){
+		fscanf(fp, "%[^\n]s %[^\n]s %d %[^\n]s %d\n", c[count].name, c[count].prof, &c[count].class_no, c[count].day, &c[count].time); 
+		if(feof(fp)) break;
+	}
+	fclose(fp);
+	printf("=> 로딩성공!\n");
+	return count;
 }
