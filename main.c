@@ -21,7 +21,11 @@ int main(void){
 			getchar();
 			count+=addClass(&clist[curcount++]);
 		}
-		else if(menu==3) printf("update\n");
+		else if(menu==3){
+			getchar();
+			updateClass(&clist[count-1]);
+			
+		}
 		else if(menu==4) printf("delete\n");
 		else if(menu==5) printf("save\n");
 		else if(menu==6) printf("search\n");
