@@ -13,7 +13,7 @@ int selectMenu(){
 	return menu;
 }
 
-listSubject(Classes *c, int count){
+void listSubject(Classes *c, int count){
 //class는 교시, Day는 요일, Section은 분반
 	printf("\nNo. Subject       Professor  Class  Day  Section\n");	 
 	printf("==================================================\n");

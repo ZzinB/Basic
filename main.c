@@ -23,8 +23,12 @@ int main(void){
 		}
 		else if(menu==3){
 			getchar();
-			updateClass(&clist[count-1]);
-			
+			int no=selectDataNo(clist, curcount);
+			if(no==0){
+				printf("==> 취소됨!");
+				continue;
+			}
+			updateClass(&clist[no-1]);
 		}
 		else if(menu==4) printf("delete\n");
 		else if(menu==5){
