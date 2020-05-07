@@ -50,5 +50,6 @@ int main(void){
 		}
 		else if(menu==6) printf("search\n");
 	}
+	printf("종료됨!\n");
 	return 0;
 }
