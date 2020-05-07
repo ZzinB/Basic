@@ -9,13 +9,14 @@ int selectMenu(){
 	printf("4. 과목삭제\n");
 	printf("5. 파일저장\n");
 	printf("6. 과목검색\n");
+	printf("0. 종료\n");
 	scanf("%d", &menu);
 	return menu;
 }
 
 void listSubject(Classes *c, int count){
 //class는 교시, Day는 요일, Section은 분반
-	printf("\nNo.  Subject    Professor   Class  Day  Section\n");	 
+	printf("\nNo.  Subject   Professor   Class  Day  Section\n");	 
 	printf("==================================================\n");
 	for(int i=0 ; i<count ; i++){
 		if(c[i].time == -1 || c[i].class_no == -1) continue;
