@@ -10,6 +10,7 @@ int selectMenu(){
 	printf("5. 파일저장\n");
 	printf("6. 과목검색\n");
 	printf("0. 종료\n");
+	printf("원하는 메뉴는? ");
 	scanf("%d", &menu);
 	return menu;
 }
