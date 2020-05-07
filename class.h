@@ -12,6 +12,6 @@ typedef struct{
 int addClass(Classes *c);
 void readClass(Classes *c);
 int updateClass(Classes *c);
-int delteClass(Classes *c);
+int deleteClass(Classes *c);
 //Search
 void SearchSubject(Classes *c, int count);

@@ -30,7 +30,20 @@ int main(void){
 			}
 			updateClass(&clist[no-1]);
 		}
-		else if(menu==4) printf("delete\n");
+		else if(menu==4){
+			getchar();
+			int no=selectDataNo(clist, curcount);
+			if(no==0){
+				printf("==> 취소됨!");
+				continue;
+			}
+			int deleteok;
+			printf("정말로 삭제하시겠습니까?(삭제: 1) ");
+			scanf("%d",&deleteok);
+			if(deleteok==1){
+				if(deleteClass(&clist[no-1])) count--;
+			}
+		}
 		else if(menu==5){
 			if (count==0) printf("데이터가 없습니다!\n");
 			else saveData(clist, curcount);

@@ -47,3 +47,9 @@ int updateClass(Classes *c){
 	printf("==> 수정됨\n");
 	return 1;
 }
+
+int deleteClass(Classes *c){
+	c->class_no=-1;
+	printf("==> 삭제됨!\n");
+	return 1;
+}
