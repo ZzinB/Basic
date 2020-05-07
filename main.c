@@ -27,7 +27,10 @@ int main(void){
 			
 		}
 		else if(menu==4) printf("delete\n");
-		else if(menu==5) printf("save\n");
+		else if(menu==5){
+			if (count==0) printf("데이터가 없습니다!\n");
+			else saveData(clist, curcount);
+		}
 		else if(menu==6) printf("search\n");
 	}
 	return 0;
