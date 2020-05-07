@@ -7,7 +7,7 @@ int main(void){
 	int curcount=0;
 	int count=0, menu;
 	
-	//count = loadData(clist);
+	count = loadData(clist);
 	curcount=count;
 
 	while(1){
