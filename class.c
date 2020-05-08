@@ -12,7 +12,7 @@ int addClass(Classes *c){
 	printf("분반은? ");
 	scanf("%d",&c->class_no);
 	getchar();
-	printf("수업 요일은? ");
+	printf("수업 요일은(월~금 중 택 1)? ");
 	scanf("%[^\n]s",c->day);
 	getchar();
 	printf("수업 교시는? ");
