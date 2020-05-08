@@ -48,7 +48,7 @@ int main(void){
 			if (count==0) printf("데이터가 없습니다!\n");
 			else saveData(clist, curcount);
 		}
-		else if(menu==6) printf("search\n");
+		else if(menu==6) SearchSubject(clist, curcount);
 	}
 	printf("종료됨!\n");
 	return 0;
