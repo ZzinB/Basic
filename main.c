@@ -14,7 +14,13 @@ int main(void){
 		menu=selectMenu();
 		fflush(stdin);
 		if(menu==0) break;
-		else if(menu==1){
+		if(menu == 1 || menu == 3 || menu == 4){
+			if(count == 0){
+			printf("데이터가 없습니다\n");
+			continue;
+			}
+		}
+		if(menu==1){
 			listSubject(clist,curcount);
 		}
 		else if(menu==2){
