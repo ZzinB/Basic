@@ -55,6 +55,7 @@ int main(void){
 			else saveData(clist, curcount);
 		}
 		else if(menu==6) SearchSubject(clist, curcount);
+		else if(menu==7) printf("특정 기능 수행\n");
 	}
 	printf("종료됨!\n");
 	return 0;
