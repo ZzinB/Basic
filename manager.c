@@ -95,7 +95,7 @@ void SearchSubject(Classes *c, int count){
 	}
 } */
 
-void ReadDayList(Classes *c){
+void ReadDayList(Classes *c, int count){
 	int scount = 0;
 	char search[20];
 
