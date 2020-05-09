@@ -106,7 +106,7 @@ void ReadDayList(Classes *c, int count){
 	printf("==================================================\n");
 	
 	for(int i=0 ; i<count ; i++){
-		if(c[i].class_np != -1){
+		if(c[i].class_no != -1){
 			if(strstr(c[i].day,search)){
 				printf("%2d", i+1);
 				readClass(&c[i]);
@@ -116,6 +116,4 @@ void ReadDayList(Classes *c, int count){
 	}
 	if(scount == 0) printf("=>검색된 데이터 없음!\n");
 	printf("\n");
-}
-
 }
