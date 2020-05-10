@@ -7,6 +7,8 @@ typedef struct{
 	int class_no; //분반
 	char day[5]; // 수업 요일
 	int time; //교시
+	int kind; //전공(1) 교양(2)
+	int credit; //학점
 } Classes;
 //CRUD
 int addClass(Classes *c);
