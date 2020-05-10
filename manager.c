@@ -8,7 +8,10 @@ int selectMenu(){
 	printf("3. 과목수정\n");
 	printf("4. 과목삭제\n");
 	printf("5. 파일저장\n");
-	printf("6. 과목검색\n");
+	printf("6. 과목이름 검색\n");
+	printf("7. 요일별 검색\n");
+	printf("8. 예정\n");
+	printf("9. 예정\n");
 	printf("0. 종료\n");
 	printf("원하는 메뉴는? ");
 	scanf("%d", &menu);
