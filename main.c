@@ -59,7 +59,7 @@ int main(void){
 		else if(menu==9) printf("특정 기능\n");
 
 		else if(menu==7) ReadDayList(clist, curcount);
-
+		else if(menu==8) Calculation(clist, curcount);
 	}
 	printf("종료됨!\n");
 	return 0;
