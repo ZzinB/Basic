@@ -12,6 +12,7 @@ int selectMenu(){
 	printf("0. 종료\n");
 	printf("원하는 메뉴는? ");
 	scanf("%d", &menu);
+	printf("\n");
 	return menu;
 }
 
@@ -86,3 +87,34 @@ void SearchSubject(Classes *c, int count){
 	printf("\n");
 }
 
+/*void Calculation(Classes *c, int count){
+	int sum;
+	for(int i=0 ; i<count ; i++){
+		if(c[i].class_np != -1){
+			sum += c[i].
+		}
+	}
+} */
+
+void ReadDayList(Classes *c, int count){
+	int scount = 0;
+	char search[20];
+
+	printf("요일을 입력하세요.(월금:월, 화목:화, 수:수)");
+	scanf("%s", search);
+
+	printf("\nNo.  Subject   Professor   Class  Day  Section\n");
+	printf("==================================================\n");
+	
+	for(int i=0 ; i<count ; i++){
+		if(c[i].class_no != -1){
+			if(strstr(c[i].day,search)){
+				printf("%2d", i+1);
+				readClass(&c[i]);
+				scount++;
+			}
+		}
+	}
+	if(scount == 0) printf("=>검색된 데이터 없음!\n");
+	printf("\n");
+}
