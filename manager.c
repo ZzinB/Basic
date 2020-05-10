@@ -87,14 +87,39 @@ void SearchSubject(Classes *c, int count){
 	printf("\n");
 }
 
-/*void Calculation(Classes *c, int count){
-	int sum;
+void Calculation(Classes *c, int count){
+	int sum = 0;
+	int over = 0; 
+	int more = 0;
+	int choice;
+	printf("선택할 수 있는 학점은?(21학점:1, 18학점:2, 15학점:3)");
+	scanf("%d", &choice);
+
 	for(int i=0 ; i<count ; i++){
-		if(c[i].class_np != -1){
-			sum += c[i].
-		}
+		if(c[i].class_no != -1)
+				sum += c[i].credit;
 	}
-} */
+	if(choice == 1){
+		if(sum <= 21)
+			more = 21 - sum;
+		else
+			over = sum - 21;
+	}
+	if(choice == 2){
+		if(sum <= 18)
+			more = 18 - sum;
+		else 
+			over = sum - 18;
+	}
+	if(choice == 3){
+		if(sum <= 15)
+			more = 15 - sum;
+		else 
+			over = sum - 15;
+	}
+	printf("총 학점 : %d,\n남은학점 : %d,\n초과 된 학점 : %d\n", sum, more, over);
+}
+ 
 
 void ReadDayList(Classes *c, int count){
 	int scount = 0;
