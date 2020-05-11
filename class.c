@@ -12,7 +12,7 @@ int addClass(Classes *c){
 	printf("분반은? ");
 	scanf("%d",&c->class_no);
 	getchar();
-	printf("수업 요일은(월~금 중 택 1)? ");
+	printf("수업 요일은(월금:월, 화목:화, 수:수)? ");
 	scanf("%[^\n]s",c->day);
 	getchar();
 	printf("수업 교시는? ");
@@ -28,7 +28,7 @@ int addClass(Classes *c){
 }
 
 void  readClass(Classes *c){
-	printf("%10s %10s %8d %10s %8d\n",c->name, c->prof, c->class_no, c->day, c->time); 
+	printf("%10s %10s %8d %10s %8d %8d %.1f\n",c->name, c->prof, c->class_no, c->day, c->time, c->kind, c->credit); 
 }
 
 int updateClass(Classes *c){
@@ -43,7 +43,7 @@ int updateClass(Classes *c){
 	printf("분반은? ");
 	scanf("%d",&c->class_no);
 	getchar();
-	printf("수업 요일은? ");
+	printf("수업 요일은?(월금:월, 화목:화, 수:수");
 	scanf("%[^\n]s",c->day);
 	getchar();
 	printf("수업 교시는? ");
