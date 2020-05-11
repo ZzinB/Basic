@@ -18,6 +18,11 @@ int addClass(Classes *c){
 	printf("수업 교시는? ");
 	scanf("%d",&c->time);
 	getchar();
+	printf("전공(1) / 교양(2)? ");
+	scanf("%d",&c->kind);
+	getchar();
+	printf("학점은? ");
+	scanf("%d",&c->credit);
 	printf("==> 추가\n");
 	return 1;
 }
@@ -44,6 +49,11 @@ int updateClass(Classes *c){
 	printf("수업 교시는? ");
 	scanf("%d",&c->time);
 	getchar();
+	printf("전공(1) / 교양(2)? ");
+	scanf("%d",&c->kind);
+	getchar();
+	printf("학점은? ");
+	scanf("%d",&c->credit);
 	printf("==> 수정됨\n");
 	return 1;
 }
