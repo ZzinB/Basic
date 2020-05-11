@@ -91,9 +91,9 @@ void SearchSubject(Classes *c, int count){
 }
 
 void Calculation(Classes *c, int count){
-	int sum = 0;
-	int over = 0; 
-	int more = 0;
+	float sum = 0;
+	float over = 0; 
+	float more = 0;
 	int choice;
 	printf("선택할 수 있는 학점은?(21학점:1, 18학점:2, 15학점:3)");
 	scanf("%d", &choice);
@@ -120,7 +120,7 @@ void Calculation(Classes *c, int count){
 		else 
 			over = sum - 15;
 	}
-	printf("총 학점 : %d,\n남은학점 : %d,\n초과 된 학점 : %d\n", sum, more, over);
+	printf("총 학점 : %.1f,\n남은학점 : %.1f,\n초과 된 학점 : %.1f\n", sum, more, over);
 }
  
 
