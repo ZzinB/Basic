@@ -10,7 +10,7 @@ int selectMenu(){
 	printf("5. 파일저장\n");
 	printf("6. 과목이름 검색\n");
 	printf("7. 요일별 검색\n");
-	printf("8. 예정\n");
+	printf("8. 학점계산기\n");
 	printf("9. 예정\n");
 	printf("0. 종료\n");
 	printf("원하는 메뉴는? ");
