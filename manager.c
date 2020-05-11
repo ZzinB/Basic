@@ -95,13 +95,18 @@ void Calculation(Classes *c, int count){
 	float over = 0; 
 	float more = 0;
 	int choice;
-	printf("선택할 수 있는 학점은?(21학점:1, 18학점:2, 15학점:3)");
-	scanf("%d", &choice);
+
+	printf("선택할 수 있는 학점은?(21학점:1, 18학점:2, 15학점:3) ");
+	scanf(" %d", &choice);
+	printf("\n");
 
 	for(int i=0 ; i<count ; i++){
 		if(c[i].class_no != -1)
 				sum += c[i].credit;
 	}
+	if(choice != 1 && choice !=2 && choice !=3)
+		printf("=> 잘못입력하셨습니다!\n");
+	if(choice == 1 || choice == 2 || choice == 3){
 	if(choice == 1){
 		if(sum <= 21)
 			more = 21 - sum;
@@ -120,7 +125,8 @@ void Calculation(Classes *c, int count){
 		else 
 			over = sum - 15;
 	}
-	printf("총 학점 : %.1f,\n남은학점 : %.1f,\n초과 된 학점 : %.1f\n", sum, more, over);
+	printf("-총 학점 : %.1f,\n-남은학점 : %.1f,\n-초과 된 학점 : %.1f\n", sum, more, over);
+	}
 }
  
 
