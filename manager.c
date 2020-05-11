@@ -21,9 +21,9 @@ int selectMenu(){
 }
 
 void listSubject(Classes *c, int count){
-//class는 교시, Day는 요일, Section은 분반
-	printf("\nNo.  Subject   Professor   Class  Day  Section\n");	 
-	printf("==================================================\n");
+	printf("//class 교시, Day 요일, Section 분반, Kind 전공1/교양2, Credit 학점//\n");
+	printf("\nNo.  Subject   Professor   Class  Day  Section  Kind  Credit\n");	 
+	printf("==============================================================\n");
 	for(int i=0 ; i<count ; i++){
 		if(c[i].time == -1 || c[i].class_no == -1) continue;
 		printf("%2d. ", i+1);
