@@ -22,7 +22,7 @@ int addClass(Classes *c){
 	scanf("%d",&c->kind);
 	getchar();
 	printf("학점은? ");
-	scanf("%d",&c->credit);
+	scanf("%f",&c->credit);
 	printf("==> 추가\n");
 	return 1;
 }
@@ -53,7 +53,7 @@ int updateClass(Classes *c){
 	scanf("%d",&c->kind);
 	getchar();
 	printf("학점은? ");
-	scanf("%d",&c->credit);
+	scanf("%f",&c->credit);
 	printf("==> 수정됨\n");
 	return 1;
 }
