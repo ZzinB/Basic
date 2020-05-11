@@ -134,6 +134,8 @@ void ReadDayList(Classes *c, int count){
 	int scount = 0;
 	char search[20];
 
+	int a[10];
+
 	printf("요일을 입력하세요.(월금:월, 화목:화, 수:수)");
 	scanf("%s", search);
 
@@ -149,6 +151,13 @@ void ReadDayList(Classes *c, int count){
 			}
 		}
 	}
+/*	for(int i=0 ; i<scount ; i++){
+		a[i] = c[i].class_no;
+		if(strstr(c[i].day,search)){
+			if(a[i] == c[i].class_no) printf("!!");
+		}
+	} */
+
 	if(scount == 0) printf("=>검색된 데이터 없음!\n");
 	printf("\n");
 }
