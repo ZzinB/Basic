@@ -55,11 +55,11 @@ int main(void){
 			else saveData(clist, curcount);
 		}
 		else if(menu==6) SearchSubject(clist, curcount);
-
-		else if(menu==9) printf("특정 기능\n");
-
 		else if(menu==7) ReadDayList(clist, curcount);
-		else if(menu==8) Calculation(clist, curcount);
+//교수님검색		else if(menu==8) 
+		else if(menu==9) Calculation(clist, curcount);
+		else if(menu==10) printf("특정 기능\n");
+
 	}
 	printf("종료됨!\n");
 	return 0;
