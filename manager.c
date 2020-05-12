@@ -84,7 +84,7 @@ int Search_control(Classes *c, int count){
 	else if(menu==3) SearchProf(c, count);
 	else if(menu==4) Calculation(c, count);
 	else if(menu==5) printf("에정");//SearchSameTime(c, count);
-	else if(menu==6) return; 
+	else if(menu==6) return 0; 
 	else printf("잘못 누르셨습니다!\n");
 	printf("\n");
 }
@@ -98,7 +98,6 @@ void SearchSubject(Classes *c, int count){
 
 
  	printf("\nNo.  Subject   Professor   Class  Day  Section  Kind  Credit\n    ");
-
     printf("==============================================================\n");
 	for(int i=0 ; i<count ; i++){
 		if(c[i].class_no != -1){
@@ -194,7 +193,7 @@ void SearchProf(Classes *c, int count){
 	for(int i=0 ; i<count ; i++){
 		if(c[i].class_no != -1){
 			if(strstr(c[i].prof, search)){
-				printf("%2d", i+1);
+				printf("%2d ", i+1);
 				readClass(&c[i]);
 				scount++;
 			}
@@ -204,4 +203,21 @@ void SearchProf(Classes *c, int count){
 	printf("\n");
 }
 
+void SearchSameTime(Classes *c, int count){
+	Classes *s = c;
+	int scount = 0;
+	int n[20];	
+	
+	for(int i=0 ; i<count ; i++){
+		for(int j = i+1 ; j<count ; j++){
+			if((s[j].time == c[i].time) && (strcmp(s[j].day, c[i].day)==0)){
+					printf("!! 겹치는 수업이 %s요일 %d교시에 있습니다. !!\n",s[j].day, s[j].time);
+					scount++;
+			}
+		}	
+	}
+	printf("겹치는 수업은 %d개 입니다.\n", scount);
+	if(scount == 0) printf("=>중복되는 데이터 없음!");
+	printf("\n");
+}
 
