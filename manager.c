@@ -103,7 +103,7 @@ void SearchSubject(Classes *c, int count){
 	for(int i=0 ; i<count ; i++){
 		if(c[i].class_no != -1){
 			if(strstr(c[i].name, search)){
-				printf("%2d", i+1);
+				printf("%2d. ", i+1);
 				readClass(&c[i]);
 				scount++;
 			}
@@ -170,7 +170,7 @@ void ReadDayList(Classes *c, int count){
 	for(int i=0 ; i<count ; i++){
 		if(c[i].class_no != -1){
 			if(strstr(c[i].day,search)){
-				printf("%2d", i+1);
+				printf("%2d. ", i+1);
 				readClass(&c[i]);
 				scount++;
 			}
@@ -194,7 +194,7 @@ void SearchProf(Classes *c, int count){
 	for(int i=0 ; i<count ; i++){
 		if(c[i].class_no != -1){
 			if(strstr(c[i].prof, search)){
-				printf("%2d ", i+1);
+				printf("%2d. ", i+1);
 				readClass(&c[i]);
 				scount++;
 			}
