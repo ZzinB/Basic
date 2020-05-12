@@ -63,29 +63,3 @@ int deleteClass(Classes *c){
 	printf("==> 삭제됨!\n");
 	return 1;
 }
-
-void SearchProf(Classes *c, int count){
-	int scount = 0;
-	char search[20];
-
-	printf("검색할 교수님 성함은? ");
-	scanf(" %[^\n]s", search);
-
-
- 	printf("\nNo.  Subject   Professor   Class  Day  Section  Kind  Credit\n    ");
-
-    printf("==============================================================\n");
-	for(int i=0 ; i<count ; i++){
-		if(c[i].class_no != -1){
-			if(strstr(c[i].prof, search)){
-				printf("%2d", i+1);
-				readClass(&c[i]);
-				scount++;
-			}
-		}
-	}
-	if(scount == 0) printf("=>검색된 데이터 없음!");
-	printf("\n");
-}
-
-
