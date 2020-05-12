@@ -42,7 +42,7 @@ void saveData(Classes *c, int count){
 	FILE* fp;
 	fp = fopen("Classes.txt", "wt");
 	for(int i=0 ; i<count ; i++){
-			fprintf(fp, "%3d %10s %3d %10s %10s\n", c[i].class_no, c[i].day, c[i].time, c[i].prof, c[i].name);
+			fprintf(fp, "%.1f %3d %3d %10s %3d %10s %10s\n",c[i].credit, c[i].kind, c[i].class_no, c[i].day, c[i].time, c[i].prof, c[i].name);
 	}
 	fclose(fp);
 	printf("저장됨\n");
@@ -58,7 +58,7 @@ int loadData(Classes *c){
 		return 0;
 	}
 	for(;;count++){
-		fscanf(fp, "%3d %10s %3d %10s %[^\n]s\n",&c[count].class_no, c[count].day, &c[count].time, c[count].prof, c[count].name ); 
+		fscanf(fp, "%3d %10s %3d %10s %[^\n]s\n", &c[count].class_no, c[count].day, &c[count].time, c[count].prof, c[count].name ); 
 		if(feof(fp)) break;
 	}
 	fclose(fp);
