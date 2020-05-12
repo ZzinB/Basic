@@ -16,4 +16,5 @@ void readClass(Classes *c);
 int updateClass(Classes *c);
 int deleteClass(Classes *c);
 //Search
-void SearchSubject(Classes *c, int count);
+void SearchProf(Classes *c, int count);
+void SearcjSubject(Classes *c, int count);
