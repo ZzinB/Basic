@@ -96,14 +96,13 @@ void SearchSubject(Classes *c, int count){
 
 	printf("검색할과목명은? ");
 	scanf(" %[^\n]s", search);
+	Classes *s = c;
 
-
- 	printf("\nNo.  Subject   Professor   Class  Day  Section  Kind  Credit\n    ");
-    printf("==============================================================\n");
+ 	printf("\n Subject   Professor   Class  Day  Section  Kind  Credit\n");
+    printf("===========================================================\n");
 	for(int i=0 ; i<count ; i++){
 		if(c[i].class_no != -1){
 			if(strstr(c[i].name, search)){
-				printf("%2d. ", i+1);
 				readClass(&c[i]);
 				scount++;
 			}
@@ -163,14 +162,13 @@ void ReadDayList(Classes *c, int count){
 	printf("요일을 입력하세요.(월금:월, 화목:화, 수:수)");
 	scanf("%s", search);
 
-	printf("\nNo.  Subject   Professor   Class  Day  Section  Kind  Credit\n    ");
+	printf("\nSubject   Professor   Class  Day  Section  Kind  Credit\n");
 
-	printf("==============================================================\n");
+	printf("==========================================================\n");
 	
 	for(int i=0 ; i<count ; i++){
 		if(c[i].class_no != -1){
 			if(strstr(c[i].day,search)){
-				printf("%2d. ", i+1);
 				readClass(&c[i]);
 				scount++;
 			}
@@ -188,13 +186,12 @@ void SearchProf(Classes *c, int count){
 	scanf(" %[^\n]s", search);
 
 
- 	printf("\nNo.  Subject   Professor   Class  Day  Section  Kind  Credit\n    ");
+ 	printf("\nSubject   Professor   Class  Day  Section  Kind  Credit\n ");
 
-    printf("==============================================================\n");
+    printf("==========================================================\n");
 	for(int i=0 ; i<count ; i++){
 		if(c[i].class_no != -1){
 			if(strstr(c[i].prof, search)){
-				printf("%2d. ", i+1);
 				readClass(&c[i]);
 				scount++;
 			}
