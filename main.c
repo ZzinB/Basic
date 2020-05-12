@@ -56,7 +56,7 @@ int main(void){
 		}
 		else if(menu==6) Search_control(clist, curcount);
 		else if(menu==7) printf("특정 기능\n");
-		else if(menu==8) SearchSameTime(clist, curcount);
+		
 	}
 	printf("종료됨!\n");
 	return 0;
