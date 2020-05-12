@@ -83,7 +83,7 @@ int Search_control(Classes *c, int count){
 	else if(menu==2) ReadDayList(c,count);
 	else if(menu==3) SearchProf(c, count);
 	else if(menu==4) Calculation(c, count);
-	else if(menu==5) printf("에정");//SearchSameTime(c, count);
+	else if(menu==5) SearchSameTime(c, count);
 	else if(menu==6) return 0; 
 	else printf("잘못 누르셨습니다!\n");
 	printf("\n");
