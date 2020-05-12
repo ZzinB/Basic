@@ -208,16 +208,15 @@ void SearchSameTime(Classes *c, int count){
 	int scount = 0;
 	int n[20];	
 	
-	
 	for(int i=0 ; i<count ; i++){
 		for(int j = i+1 ; j<count ; j++){
 			if((s[j].time == c[i].time) && (strcmp(s[j].day, c[i].day)==0)){
-					printf("!! %s요일 %d교시 !!\n",s[j].day, s[j].time);
+					printf("!! %s요일 %d교시 !!\n", s[j].day, s[j].time);
 					scount++;
 			}
 		}	
 	}
-	printf("겹치는 수업은 %d개 입니다.\n", scount);
+	printf("시간이 겹치는 과목은 총 %d개 입니다.\n", scount);
 	if(scount == 0) printf("=>중복되는 데이터 없음!");
 	printf("\n");
 }
