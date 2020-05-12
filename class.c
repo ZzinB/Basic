@@ -63,24 +63,3 @@ int deleteClass(Classes *c){
 	printf("==> 삭제됨!\n");
 	return 1;
 }
-
-/*
-void overlapClass(Classes *c, int count){
-	int scount = 0;
-	int overlap_list[10];
-	printf("%d",
-	printf("\nNo.  Subject   Professor   Class  Day  Section\n");
-    printf("==================================================\n");
-	for(int i=0 ; i<count ; i++){
-		if(c[i].class_no != -1){
-			if(strstr(c[i].name, search)){
-				printf("%2d", i+1);
-				readClass(&c[i]);
-				scount++;
-			}
-		}
-	}
-	if(scount == 0) printf("=>검색된 데이터 없음!");
-	printf("\n");
-
-}*/

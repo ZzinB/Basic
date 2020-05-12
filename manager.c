@@ -8,11 +8,8 @@ int selectMenu(){
 	printf("3. 과목수정\n");
 	printf("4. 과목삭제\n");
 	printf("5. 파일저장\n");
-	printf("6. 과목이름 검색\n");
-	printf("7. 요일별 검색\n");
-	printf("8. 교수님 성함 검색\n");
-	printf("9. 학점계산기\n");
-	printf("10. 예정\n");
+	printf("6. 검색 기능\n");
+	printf("7. 예정\n");
 	printf("0. 종료\n");
 	printf("원하는 메뉴는? ");
 	scanf("%d", &menu);
@@ -67,6 +64,26 @@ int loadData(Classes *c){
 	fclose(fp);
 	printf("=> 로딩성공!\n");
 	return count;
+}
+
+void Search_control(Classes *c, int count){
+	int menu;
+	printf("\n** 검색 기능**\n");
+	printf("1. 과목이름 검색\n");
+	printf("2. 요일별 검색\n");
+	printf("3. 교수님 성함 검색\n");
+	printf("4. 학점계산기\n");
+	printf("5. 겹치는 시간 검색\n");
+	printf("원하는 메뉴는? ");
+	scanf("%d", &menu);
+	getchar();
+	if(menu==1) SearchSubject(c,count);
+	else if(menu==2) ReadDayList(c,count);
+	else if(menu==3) SearchProf(c, count);
+	else if(menu==4) Calculation(c, count);
+	else if(menu==5) printf("에정");//SearchSameTime(c, count);
+	else printf("잘못 누르셨습니다!\n");
+	printf("\n");
 }
 
 void SearchSubject(Classes *c, int count){
@@ -160,3 +177,28 @@ void ReadDayList(Classes *c, int count){
 	if(scount == 0) printf("=>검색된 데이터 없음!\n");
 	printf("\n");
 }
+void SearchProf(Classes *c, int count){
+	int scount = 0;
+	char search[20];
+
+	printf("검색할 교수님 성함은? ");
+	scanf(" %[^\n]s", search);
+
+
+ 	printf("\nNo.  Subject   Professor   Class  Day  Section  Kind  Credit\n    ");
+
+    printf("==============================================================\n");
+	for(int i=0 ; i<count ; i++){
+		if(c[i].class_no != -1){
+			if(strstr(c[i].prof, search)){
+				printf("%2d", i+1);
+				readClass(&c[i]);
+				scount++;
+			}
+		}
+	}
+	if(scount == 0) printf("=>검색된 데이터 없음!");
+	printf("\n");
+}
+
+
