@@ -66,7 +66,7 @@ int loadData(Classes *c){
 	return count;
 }
 
-void Search_control(Classes *c, int count){
+int Search_control(Classes *c, int count){
 	int menu;
 	printf("\n** 검색 기능**\n");
 	printf("1. 과목이름 검색\n");
@@ -74,14 +74,17 @@ void Search_control(Classes *c, int count){
 	printf("3. 교수님 성함 검색\n");
 	printf("4. 학점계산기\n");
 	printf("5. 겹치는 시간 검색\n");
+	printf("6. 뒤로가기\n");
 	printf("원하는 메뉴는? ");
 	scanf("%d", &menu);
 	getchar();
+
 	if(menu==1) SearchSubject(c,count);
 	else if(menu==2) ReadDayList(c,count);
 	else if(menu==3) SearchProf(c, count);
 	else if(menu==4) Calculation(c, count);
 	else if(menu==5) printf("에정");//SearchSameTime(c, count);
+	else if(menu==6) return; 
 	else printf("잘못 누르셨습니다!\n");
 	printf("\n");
 }
