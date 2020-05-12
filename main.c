@@ -54,11 +54,8 @@ int main(void){
 			if (count==0) printf("데이터가 없습니다!\n");
 			else saveData(clist, curcount);
 		}
-		else if(menu==6) SearchSubject(clist, curcount);
-		else if(menu==7) ReadDayList(clist, curcount);
-		else if(menu==8) SearchProf(clist,curcount); 
-		else if(menu==9) Calculation(clist, curcount);
-		else if(menu==10) printf("특정 기능\n");
+		else if(menu==6) Search_control(clist, curcount);
+		else if(menu==7) printf("특정 기능\n");
 
 	}
 	printf("종료됨!\n");
