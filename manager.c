@@ -9,7 +9,6 @@ int selectMenu(){
 	printf("4. 과목삭제\n");
 	printf("5. 파일저장\n");
 	printf("6. 검색 기능\n");
-	printf("7. 예정\n");
 	printf("0. 종료\n\n");
 	printf("=> 원하는 메뉴는? ");
 	scanf("%d", &menu);
@@ -74,7 +73,8 @@ int Search_control(Classes *c, int count){
 	printf("3. 교수님 성함 검색\n");
 	printf("4. 학점계산기\n");
 	printf("5. 겹치는 시간 검색\n");
-	printf("6. 뒤로가기\n\n");
+	printf("6. 전공/교양조회\n");
+	printf("7. 뒤로가기\n\n");
 	printf("=> 원하는 메뉴는? ");
 	scanf("%d", &menu);
 	printf("\n");
@@ -85,7 +85,8 @@ int Search_control(Classes *c, int count){
 	else if(menu==3) SearchProf(c, count);
 	else if(menu==4) Calculation(c, count);
 	else if(menu==5) SearchSameTime(c, count);
-	else if(menu==6) return 0; 
+	else if(menu==6) printf("리스트!!!!!!!!!!!");
+	else if(menu==7) return 0; 
 	else printf("잘못 누르셨습니다!\n");
 	printf("\n");
 }
