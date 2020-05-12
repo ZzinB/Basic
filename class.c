@@ -28,7 +28,7 @@ int addClass(Classes *c){
 }
 
 void  readClass(Classes *c){
-	printf("%10s %10s %8d %10s %8d %8d %.1f\n",c->name, c->prof, c->class_no, c->day, c->time, c->kind, c->credit); 
+	printf("%5s %12s %8d %8s %8d %8d %5.1f\n",c->name, c->prof, c->class_no, c->day, c->time, c->kind, c->credit); 
 }
 
 int updateClass(Classes *c){
