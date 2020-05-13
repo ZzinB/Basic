@@ -3,12 +3,13 @@
 int selectMenu(){
 	int menu;
 	printf("\n** 예비시간표관리**\n");
-	printf("1. 시간표조회\n");
+	printf("1. 조회\n");
 	printf("2. 과목추가\n");
 	printf("3. 과목수정\n");
 	printf("4. 과목삭제\n");
 	printf("5. 파일저장\n");
 	printf("6. 검색 기능\n");
+	printf("7. 학점 계산기\n");
 	printf("0. 종료\n\n");
 	printf("=> 원하는 메뉴는? ");
 	scanf("%d", &menu);
@@ -71,10 +72,8 @@ int Search_control(Classes *c, int count){
 	printf("1. 과목이름 검색\n");
 	printf("2. 요일별 검색\n");
 	printf("3. 교수님 성함 검색\n");
-	printf("4. 학점계산기\n");
-	printf("5. 겹치는 시간 검색\n");
-	printf("6. 전공/교양조회\n");
-	printf("7. 뒤로가기\n\n");
+	printf("4. 겹치는 시간 검색\n");
+	printf("0. 뒤로가기\n\n");
 	printf("=> 원하는 메뉴는? ");
 	scanf("%d", &menu);
 	printf("\n");
@@ -83,14 +82,30 @@ int Search_control(Classes *c, int count){
 	if(menu==1) SearchSubject(c,count);
 	else if(menu==2) ReadDayList(c,count);
 	else if(menu==3) SearchProf(c, count);
-	else if(menu==4) Calculation(c, count);
-	else if(menu==5) SearchSameTime(c, count);
-	else if(menu==6) ListSubjectType(c,count);
-	else if(menu==7) return 0; 
+	else if(menu==4) SearchSameTime(c, count);
+	else if(menu==0) return 0; 
 	else printf("잘못 누르셨습니다!\n");
 	printf("\n");
 }
 
+
+void Read(Classes *c, int count){
+	int menu;
+	printf("\n** 조회  기능**\n");
+	printf("1. 시간표 조회\n");
+	printf("2. 전공/교양 조회\n");
+	printf("0. 뒤로가기\n\n");
+	printf("=> 원하는 메뉴는? ");
+	scanf("%d", &menu);
+	printf("\n");
+	getchar();
+
+	if(menu==1) listSubject(c,count);
+	else if(menu==2) ListSubjectType(c, count);
+	else if(menu==0) return; 
+	else printf("잘못 누르셨습니다!\n");
+	printf("\n");
+}
 void SearchSubject(Classes *c, int count){
 	int scount = 0;
 	char search[20];
