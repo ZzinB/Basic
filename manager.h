@@ -11,4 +11,4 @@ void ReadDayList(Classes *c, int count);	//요일별검색함수
 void SearchSameTime(Classes *c, int count);	//겹치는시간과목찾는함수
 void SearchProf(Classes *c, int count);		//교수님이름검색함수
 void SearchSubject(Classes *c, int count);	//과목이름검색함수
-//교양/전공검색함수
+void ListSubjectType(Classes *c, int count);//교양/전공검색함수
