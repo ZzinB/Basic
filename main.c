@@ -21,7 +21,7 @@ int main(void){
 			}
 		}
 		if(menu==1){
-			listSubject(clist,curcount);
+			Read(clist,curcount);
 		}
 		else if(menu==2){
 			getchar();
@@ -55,6 +55,7 @@ int main(void){
 			else saveData(clist, curcount);
 		}
 		else if(menu==6) Search_control(clist, curcount);		
+		else if(menu==7) Calculation(clist,curcount);
 	}
 	printf("종료됨!\n");
 	return 0;
