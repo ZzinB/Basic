@@ -85,7 +85,7 @@ int Search_control(Classes *c, int count){
 	else if(menu==3) SearchProf(c, count);
 	else if(menu==4) Calculation(c, count);
 	else if(menu==5) SearchSameTime(c, count);
-	else if(menu==6) printf("리스트!!!!!!!!!!!");
+	else if(menu==6) ListSubjectType(c,count);
 	else if(menu==7) return 0; 
 	else printf("잘못 누르셨습니다!\n");
 	printf("\n");
@@ -220,3 +220,34 @@ void SearchSameTime(Classes *c, int count){
 	printf("\n");
 }
 
+void ListSubjectType(Classes *c, int count){
+	int scount = 0;
+	printf("!!!전공 수업 리스트!!!");
+ 	printf("\nSubject   Professor   Class  Day  Section  Kind  Credit\n ");
+
+    printf("==========================================================\n");
+	for(int i=0 ; i<count ; i++){
+		if(c[i].class_no != -1){
+			if(c[i].kind==1){
+				readClass(&c[i]);
+				scount++;
+			}
+		}
+	}
+	if (scount==0) printf("==>검색된 데이터 없음!\n\n");
+	scount=0;
+	printf("!!!교양 수업 리스트!!!");
+ 	printf("\nSubject   Professor   Class  Day  Section  Kind  Credit\n ");
+
+    printf("==========================================================\n");
+	for (int i=0;i<count ; i++){
+		if(c[i].class_no != -1){
+			if(c[i].kind==2){
+				readClass(&c[i]);
+				scount++;
+			}
+		}
+	} 
+	if(scount == 0) printf("=>검색된 데이터 없음!");
+	printf("\n");
+}
