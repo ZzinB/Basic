@@ -3,12 +3,12 @@
 int selectMenu(){
 	int menu;
 	printf("\n** 예비시간표관리**\n");
-	printf("1. 조회\n");
+	printf("1. 조회(전공/교양,시간표) \n");
 	printf("2. 과목추가\n");
 	printf("3. 과목수정\n");
 	printf("4. 과목삭제\n");
 	printf("5. 파일저장\n");
-	printf("6. 검색 기능\n");
+	printf("6. 검색(과목,요일,교수님,중복시간)\n");
 	printf("7. 학점 계산기\n");
 	printf("0. 종료\n\n");
 	printf("=> 원하는 메뉴는? ");
@@ -66,7 +66,7 @@ int loadData(Classes *c){
 	return count;
 }
 
-int Search_control(Classes *c, int count){
+void Search_control(Classes *c, int count){
 	int menu;
 	printf("\n** 검색 기능**\n");
 	printf("1. 과목이름 검색\n");
@@ -83,7 +83,7 @@ int Search_control(Classes *c, int count){
 	else if(menu==2) ReadDayList(c,count);
 	else if(menu==3) SearchProf(c, count);
 	else if(menu==4) SearchSameTime(c, count);
-	else if(menu==0) return 0; 
+	else if(menu==0) return ; 
 	else printf("잘못 누르셨습니다!\n");
 	printf("\n");
 }
@@ -237,7 +237,7 @@ void SearchSameTime(Classes *c, int count){
 
 void ListSubjectType(Classes *c, int count){
 	int scount = 0;
-	printf("!!!전공 수업 리스트!!!");
+	printf("!! 전공 수업 리스트!!");
  	printf("\nSubject   Professor   Class  Day  Section  Kind  Credit\n ");
 
     printf("==========================================================\n");
@@ -251,7 +251,8 @@ void ListSubjectType(Classes *c, int count){
 	}
 	if (scount==0) printf("==>검색된 데이터 없음!\n\n");
 	scount=0;
-	printf("!!!교양 수업 리스트!!!");
+	printf("\n");
+	printf("!! 교양 수업 리스트!!");
  	printf("\nSubject   Professor   Class  Day  Section  Kind  Credit\n ");
 
     printf("==========================================================\n");
