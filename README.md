@@ -1,1 +1,1 @@
-# Basic code (Study)
+# This is a repository for studying C
