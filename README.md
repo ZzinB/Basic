@@ -1,5 +1,3 @@
-# CRUD_miniproject Readme
-
 ## Mini Project 주제
 예비수강신청 과목 관리 프로그램
 
